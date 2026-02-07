@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenVision | Team & Project</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            dark: '#050505',
+                            card: '#121212',
+                            green: '#10B981', // Emerald 500 (لون الهوية)
+                            glow: 'rgba(16, 185, 129, 0.5)'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* خلفية فخمة مع تدرج لوني خفيف */
+        body {
+            background-color: #050505;
+            background-image: radial-gradient(circle at 50% 0%, #1a2e25 0%, #050505 60%);
+            color: white;
+        }
+        /* تصميم البطاقات الزجاجي (Glassmorphism) */
+        .glass-card {
+            background: rgba(18, 18, 18, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        /* تأثير الحركة عند المرور (Hover Lift) */
+        .hover-lift { transition: transform 0.3s ease, border-color 0.3s ease; }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-md w-full space-y-5">
+        
+        <div class="text-center space-y-3">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-brand-green/10 border border-brand-green/20 mb-2">
+                <i class="fas fa-trophy text-brand-green text-xs mr-2"></i>
+                <span class="text-xs font-semibold text-brand-green tracking-wide uppercase">Top 40 @ StartSmart</span>
+            </div>
+            
+            <div class="flex justify-center my-2">
+                <div class="w-24 h-24 rounded-2xl glass-card flex items-center justify-center p-2 shadow-2xl shadow-brand-green/10">
+                    <img src="assets/logo.png" alt="GreenVision" class="w-full h-full object-contain opacity-90">
+                </div>
+            </div>
+
+            <h1 class="text-3xl font-bold tracking-tight">
+                Green<span class="text-brand-green">Vision</span>
+            </h1>
+            <p class="text-slate-400 text-sm leading-relaxed px-4">
+                Safeguarding Saudi's Nature with AI & Drones.
+                <br>Real-time detection of invasive species.
+            </p>
+        </div>
+
+        <a href="#" target="_blank" class="group relative block w-full">
+            <div class="absolute -inset-0.5 bg-brand-green rounded-xl blur opacity-30 group-hover:opacity-60 transition duration-500 animate-pulse-slow"></div>
+            <div class="relative flex items-center justify-center space-x-3 bg-brand-card hover:bg-[#1a1a1a] border border-brand-green/30 rounded-xl py-4 px-6 transition duration-300">
+                <span class="text-lg font-bold text-white">🚀 Launch Live Dashboard</span>
+                <i class="fas fa-arrow-right text-brand-green group-hover:translate-x-1 transition-transform"></i>
+            </div>
+        </a>
+
+        <div class="grid grid-cols-3 gap-2 text-center">
+            <div class="glass-card rounded-xl p-2 py-3">
+                <p class="text-brand-green font-bold text-lg">95%+</p>
+                <p class="text-[10px] text-slate-500 uppercase font-bold">Accuracy</p>
+            </div>
+            <div class="glass-card rounded-xl p-2 py-3">
+                <p class="text-brand-green font-bold text-lg">MVP</p>
+                <p class="text-[10px] text-slate-500 uppercase font-bold">Ready</p>
+            </div>
+            <div class="glass-card rounded-xl p-2 py-3">
+                <p class="text-brand-green font-bold text-lg">AI</p>
+                <p class="text-[10px] text-slate-500 uppercase font-bold">Powered</p>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-4 px-2 pt-2">
+            <div class="h-px bg-white/10 flex-1"></div>
+            <span class="text-[10px] text-slate-600 font-bold uppercase tracking-widest">Founding Team</span>
+            <div class="h-px bg-white/10 flex-1"></div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-3">
+            
+            <div class="glass-card p-3 rounded-2xl flex items-center space-x-4 hover-lift">
+                <img src="assets/yara.jpg" alt="Yara" class="w-12 h-12 rounded-full border-2 border-brand-green/20 object-cover">
+                <div class="flex-1">
+                    <h3 class="font-bold text-white text-sm">Yara Al-Alawi</h3>
+                    <p class="text-xs text-brand-green font-medium">Cloud & Backend Lead</p>
+                </div>
+                <a href="https://www.linkedin.com/in/yara-alalawi999" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-brand-green transition">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+
+            <div class="glass-card p-3 rounded-2xl flex items-center space-x-4 hover-lift">
+                <img src="assets/rama.jpg" alt="Rama" class="w-12 h-12 rounded-full border-2 border-brand-green/20 object-cover">
+                <div class="flex-1">
+                    <h3 class="font-bold text-white text-sm">Rama Aseeri</h3>
+                    <p class="text-xs text-slate-400 font-medium">UI/UX & Frontend Lead</p>
+                </div>
+                <a href="https://www.linkedin.com/in/rama-aseeri-6708312aa" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-brand-green transition">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+
+            <div class="glass-card p-3 rounded-2xl flex items-center space-x-4 hover-lift">
+                <img src="assets/raghad.jpg" alt="Raghad" class="w-12 h-12 rounded-full border-2 border-brand-green/20 object-cover">
+                <div class="flex-1">
+                    <h3 class="font-bold text-white text-sm">Raghad Basoudan</h3>
+                    <p class="text-xs text-slate-400 font-medium">Data Scientist</p>
+                </div>
+                <a href="https://www.linkedin.com/in/raghad-basoudan-417349315" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-brand-green transition">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+            
+        </div>
+
+        <footer class="text-center pt-6 pb-2">
+            <p class="text-[10px] text-slate-600">
+                © 2026 GreenVision. Incubated at KAU.
+            </p>
+        </footer>
+
+    </div>
+</body>
+</html>
